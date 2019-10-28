@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.auth.FirebaseAuth;
+
+import Ayah2019.MyMedicine;
+
 public class AddMedicine extends AppCompatActivity {
     private Button btnSave;
     private EditText etMname;
@@ -45,11 +49,27 @@ public class AddMedicine extends AppCompatActivity {
 
 
                 }
+                if(isok)
+                {
+                    MyMedicine m=new MyMedicine();
+                    m.setName(MedicineName);
+
+
+                }
+
+            }
+
+
+            public void  creatMyMedicine (MyMedicine m){
+
 
             }
 
 
         });
+
+
+
 
 
 
