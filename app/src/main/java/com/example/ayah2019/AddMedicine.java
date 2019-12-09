@@ -8,8 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.google.firebase.auth.FirebaseAuth;
-
+import Ayah2019.MedicineAdapter;
 import Ayah2019.MyMedicine;
 
 public class AddMedicine extends AppCompatActivity {
@@ -28,7 +27,7 @@ public class AddMedicine extends AppCompatActivity {
         {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplication(), AllMedicine.class);
+                Intent i = new Intent(getApplication(), MedicineAdapter.class);
                 startActivity(i);
             }
         });
