@@ -11,7 +11,13 @@
         android:theme="@style/AppTheme">
         <activity android:name=".HowToBuy" />
         <activity android:name=".searchMidicine" />
-        <activity android:name=".welcomescreen" />
+        <activity android:name=".welcomescreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
         <activity android:name="Ayah2019.MedicineAdapter" />
         <activity android:name=".AddMedicine" />
         <activity android:name=".signinActivity" />
