@@ -20,29 +20,37 @@
     <CheckBox
         android:id="@+id/cBcash"
         android:layout_width="108dp"
-        android:layout_height="49dp"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="463dp"
+        android:layout_marginBottom="22dp"
         android:text="CACH"
+        app:layout_constraintBottom_toTopOf="@+id/cBcredit"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="463dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
         android:id="@+id/cBcredit"
         android:layout_width="128dp"
-        android:layout_height="54dp"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginBottom="143dp"
         android:text="CREDIT CARD"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="534dp" />
+        app:layout_constraintTop_toBottomOf="@+id/cBcash" />
 
     <Button
         android:id="@+id/btnFinish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="51dp"
+        android:layout_marginRight="51dp"
+        android:layout_marginBottom="35dp"
         android:text="Finish"
-        tools:layout_editor_absoluteX="272dp"
-        tools:layout_editor_absoluteY="648dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
