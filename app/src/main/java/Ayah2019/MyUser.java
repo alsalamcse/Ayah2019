@@ -47,4 +47,14 @@ public class MyUser {
         this.phone = phone;
     }
 
+    @Override
+    public String toString() {
+        return "MyUser{" +
+                "key='" + key + '\'' +
+                ", fname='" + fname + '\'' +
+                ", lname='" + lname + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
+    }
 }

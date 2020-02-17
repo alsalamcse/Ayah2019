@@ -52,15 +52,17 @@ public class signupActivity extends AppCompatActivity {
 
 
         String phone = etPhone.getText().toString();
+       // boolean isok=true;
 
         if (email.length() < 4 ||
                 email.indexOf('@') < 0 ||
-                email.indexOf('.') < 0) {
+                email.indexOf('.') < 0)
+        {
             etEmail2.setError("Wrong Email");
             isok = false;
 
         }
-        if (passwl.length() < 8 || passwl.equals(passw2)) {
+        if (passwl.length() < 8 || passwl.equals(passw2)==false) {
             etPassword2.setError("Have to be at least 8 char and the same password");
             etPassword1.setError("Have to be at least 8 char and the same password");
             isok = false;
@@ -84,7 +86,8 @@ public class signupActivity extends AppCompatActivity {
         auth.createUserWithEmailAndPassword(email,passwl).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                    if(task.isSuccessful()){
+                    if(task.isSuccessful())
+                    {
                         Toast.makeText(signupActivity.this, "sign up successful", Toast.LENGTH_SHORT).show();
                         finish();
                         // entakl llshasha alraesea

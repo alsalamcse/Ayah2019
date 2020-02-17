@@ -22,22 +22,29 @@ public class signinActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
-        etEmail=findViewById(R.id.etEmail2);
-        etPassword=findViewById(R.id.etPassword1);
-        btnsignin=findViewById(R.id.btnsignin);
-        btnsignup=findViewById(R.id.btnsignup);
-        btnsignup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(getApplication(),signupActivity.class);
-                startActivity(i);
-            }
-        });
+        etEmail = findViewById(R.id.etEmail2);
+        etPassword = findViewById(R.id.etPassword1);
+        btnsignin = findViewById(R.id.btnsignin);
+        btnsignup = findViewById(R.id.btnsignup);
+
+
+
         btnsignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dataHndler();
             }
+        });
+
+        btnsignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplication(), signupActivity.class);
+                startActivity(i);
+            }
+        });
+    }
+
 
             private void dataHndler() {
                 String email = etEmail.getText().toString();
@@ -51,39 +58,63 @@ public class signinActivity extends AppCompatActivity {
                     etEmail.setError("Email wrong format");
                     isOk = false;
                 }
-
-                if (isOk) {
-                    signIn(email, passw);
-
+                if (passw.length() < 8)
+                {
+                    etPassword.setError("password length error");
+                    isOk=false;
                 }
+
+               // if (isOk) {
+                   // signIn(email, passw);
+
+              //  }
             }
-            private void signIn(String email, String passw) {
-                FirebaseAuth auth=FirebaseAuth.getInstance();
-                auth.signInWithEmailAndPassword(email,passw).addOnCompleteListener(signinActivity.this, new OnCompleteListener<AuthResult>() {
+
+            public boolean isValidEmailAddress(String email) {
+                String ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
+                java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
+                java.util.regex.Matcher m = p.matcher(email);
+                return m.matches();
+            }
+
+
+            private void signIn(String email, String passw)
+            {
+                FirebaseAuth auth = FirebaseAuth.getInstance();
+                auth.signInWithEmailAndPassword(email, passw).addOnCompleteListener(signinActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Intent i = new Intent(getApplication(), searchMidicine.class);
+                            startActivity(i);
+                        }
+                        else
+                            {
+                            etEmail.setError("email or password is worng");
+                        }
 
                     }
                 });
-
-
-
-
-
-
             }
 
 
 
 
 
-        });
+
+ }
 
 
 
 
 
-    }
 
 
-        }
+
+
+
+
+
+
+
+
