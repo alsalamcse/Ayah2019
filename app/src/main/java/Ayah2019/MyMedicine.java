@@ -4,15 +4,13 @@ public class MyMedicine {
 
 
     private String name;
-    private int price;
+    private String price;
 
-    public String getName()
-    {
+    public String getName() {
         return name;
-
     }
 
-    public int getPrice(){
+    public String getPrice() {
         return price;
     }
 
@@ -20,15 +18,15 @@ public class MyMedicine {
         this.name = name;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(String price) {
         this.price = price;
     }
+
     @Override
     public String toString() {
         return "MyMedicine{" +
                 "name='" + name + '\'' +
-                ", price=" + price +
+                ", price='" + price + '\'' +
                 '}';
     }
-
 }
