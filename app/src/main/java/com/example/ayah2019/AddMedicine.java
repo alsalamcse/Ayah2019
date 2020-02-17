@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import Ayah2019.MedicineAdapter;
 import Ayah2019.MyMedicine;
 
@@ -24,14 +26,7 @@ public class AddMedicine extends AppCompatActivity {
         etMname=findViewById(R.id.etMname);
         etMprice=findViewById(R.id.etMprice);
 
-        btnSave.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getApplication(), MedicineAdapter.class);
-                startActivity(i);
-            }
-        });
+
 
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +68,7 @@ public class AddMedicine extends AppCompatActivity {
             }
 
 
-            public void  creatMyMedicine (MyMedicine m)
+            private void  creatMyMedicine (MyMedicine m)
             {
 
 

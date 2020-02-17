@@ -21,15 +21,13 @@
     <CheckBox
         android:id="@+id/cBcash"
         android:layout_width="122dp"
-        android:layout_height="54dp"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="463dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginBottom="214dp"
         android:text="Cash"
-        app:layout_constraintBottom_toTopOf="@+id/cBcredit"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
         android:id="@+id/cBcredit"
@@ -53,11 +51,5 @@
         android:text="Finish"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <ListView
-        android:layout_width="166dp"
-        android:layout_height="179dp"
-        tools:layout_editor_absoluteX="74dp"
-        tools:layout_editor_absoluteY="205dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
