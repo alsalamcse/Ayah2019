@@ -52,6 +52,7 @@ public class AddMedicine extends AppCompatActivity {
                 {
                     MyMedicine m=new MyMedicine();
                     m.setName(MedicineName);
+                    creatMyMedicine(m);
 
 
                 }
@@ -59,7 +60,9 @@ public class AddMedicine extends AppCompatActivity {
             }
 
 
-            public void  creatMyMedicine (MyMedicine m){
+            public void  creatMyMedicine (MyMedicine m)
+            {
+
 
 
             }
