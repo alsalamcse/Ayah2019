@@ -26,7 +26,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="463dp"
         android:layout_marginBottom="22dp"
-        android:text="CACH"
+        android:text="Cash"
         app:layout_constraintBottom_toTopOf="@+id/cBcredit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -53,5 +53,11 @@
         android:text="Finish"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <ListView
+        android:layout_width="214dp"
+        android:layout_height="57dp"
+        tools:layout_editor_absoluteX="109dp"
+        tools:layout_editor_absoluteY="284dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
