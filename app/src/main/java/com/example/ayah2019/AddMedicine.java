@@ -13,7 +13,7 @@ import Ayah2019.MyMedicine;
 
 public class AddMedicine extends AppCompatActivity {
     private Button btnSave;
-    private EditText etMname;
+    private EditText etMname,etMprice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,7 @@ public class AddMedicine extends AppCompatActivity {
 
         btnSave=findViewById(R.id.btnSave);
         etMname=findViewById(R.id.etMname);
+        etMprice=findViewById(R.id.etMprice);
 
         btnSave.setOnClickListener(new View.OnClickListener()
         {
@@ -40,6 +41,7 @@ public class AddMedicine extends AppCompatActivity {
 
             private void dataHandler() {
                 String MedicineName=etMname.getText().toString();
+                String MedicinePrice=etMprice.getText().toString();
                 boolean isok=true;
                 if(MedicineName.length()<0)
                 {
@@ -56,7 +58,18 @@ public class AddMedicine extends AppCompatActivity {
 
 
                 }
+                if(MedicinePrice.length()<0)
+                {
+                    etMprice.setError("you have to write  MedicinePrice");
+                    isok=false;
 
+                }
+                if(isok)
+                {
+                    MyMedicine m=new MyMedicine();
+                    m.setPrice(MedicinePrice);
+
+                }
             }
 
 
