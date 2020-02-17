@@ -14,7 +14,15 @@ import static org.junit.Assert.*;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-public class ExampleInstrumentedTest {
+public class
+
+
+
+
+
+
+
+ExampleInstrumentedTest {
     @Test
     public void useAppContext() {
         // Context of the app under test.

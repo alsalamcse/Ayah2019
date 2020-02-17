@@ -13,7 +13,7 @@ import Ayah2019.MyMedicine;
 
 public class AddMedicine extends AppCompatActivity {
     private Button btnSave;
-    private EditText etMname;
+    private EditText etMname,etMprice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,7 @@ public class AddMedicine extends AppCompatActivity {
 
         btnSave=findViewById(R.id.btnSave);
         etMname=findViewById(R.id.etMname);
+        etMprice=findViewById(R.id.etMprice);
 
         btnSave.setOnClickListener(new View.OnClickListener()
         {
