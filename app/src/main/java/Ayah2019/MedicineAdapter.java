@@ -20,7 +20,8 @@ import android.widget.Toast;
 
 import com.example.ayah2019.R;
 
-public class MedicineAdapter extends ArrayAdapter<MyMedicine> {
+public class MedicineAdapter extends ArrayAdapter<MyMedicine>
+{
     public MedicineAdapter(Context context) {
         super(context, R.layout.activity_all_medicineadapter);
     }

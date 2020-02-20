@@ -5,6 +5,8 @@ public class MyMedicine {
 
     private String name;
     private String price;
+    private String title;
+    private String Gps;
 
     public String getName() {
         return name;
@@ -22,11 +24,29 @@ public class MyMedicine {
         this.price = price;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public String getGps() {
+        return Gps;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setGps(String gps) {
+        Gps = gps;
+    }
+
     @Override
     public String toString() {
         return "MyMedicine{" +
                 "name='" + name + '\'' +
                 ", price='" + price + '\'' +
+                ", title='" + title + '\'' +
+                ", Gps='" + Gps + '\'' +
                 '}';
     }
 }
