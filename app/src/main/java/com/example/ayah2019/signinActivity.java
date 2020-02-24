@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -83,10 +84,10 @@ public class signinActivity extends AppCompatActivity {
             private void signIn(String email, String passw)
             {
                 FirebaseAuth auth = FirebaseAuth.getInstance();
-                auth.signInWithEmailAndPassword(email, passw).addOnCompleteListener(signinActivity.this, new OnCompleteListener<AuthResult>() {
+                auth.signInWithEmailAndPassword(email, passw).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
+                    public void onComplete(@NonNull Task<AuthResult> medicine) {
+                        if (medicine.isSuccessful()) {
                             Intent i = new Intent(getApplication(), searchMidicine.class);
                             startActivity(i);
                         }
