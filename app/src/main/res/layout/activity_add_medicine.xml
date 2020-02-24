@@ -10,9 +10,9 @@
         android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="368dp"
         android:text="add"
         app:layout_constraintStart_toStartOf="@+id/etMname"
         app:layout_constraintTop_toBottomOf="@+id/etMname" />
@@ -31,25 +31,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etMprice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="18dp"
-        android:ems="10"
-        android:hint="MedicinePrice"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/etMname"
-        app:layout_constraintTop_toBottomOf="@+id/etMname" />
-
-    <EditText
         android:id="@+id/etTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="64dp"
         android:ems="10"
         android:hint="title"
         android:inputType="textPersonName"
@@ -60,12 +47,35 @@
         android:id="@+id/etGps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="31dp"
+        android:layout_marginBottom="156dp"
         android:ems="10"
         android:hint="Gps"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/btnSave"
         app:layout_constraintEnd_toEndOf="@+id/etMname"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/etMname" />
+
+    <CheckBox
+        android:id="@+id/chvisa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="30dp"
+        android:text="visa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etGps" />
+
+    <CheckBox
+        android:id="@+id/chcash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="35dp"
+        android:text="cash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chvisa" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

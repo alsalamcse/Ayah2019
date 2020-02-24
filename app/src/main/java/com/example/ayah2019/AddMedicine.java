@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -21,7 +22,8 @@ import Ayah2019.MyMedicine;
 
 public class AddMedicine extends AppCompatActivity {
     private Button btnSave;
-    private EditText etMname,etMprice,etTitle,etGps;
+    private EditText etMname,etTitle,etGps;
+    private CheckBox chvisa, chcash;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +32,11 @@ public class AddMedicine extends AppCompatActivity {
 
         btnSave = findViewById(R.id.btnSave);
         etMname = findViewById(R.id.etMname);
-        etMprice = findViewById(R.id.etMprice);
+        //etMprice = findViewById(R.id.etMprice);
         etTitle= findViewById(R.id.etTitle);
         etGps= findViewById(R.id.etGps);
+        chcash=findViewById(R.id.chcash);
+        chvisa=findViewById(R.id.chvisa);
 
 
 
@@ -40,13 +44,15 @@ public class AddMedicine extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 dataHandler();
+                Intent i = new Intent(getApplication(), searchMidicine.class);
+                startActivity(i);
             }
         });
     }
 
             private void dataHandler() {
                 String MedicineName=etMname.getText().toString();
-                String MedicinePrice=etMprice.getText().toString();
+               // String MedicinePrice=etMprice.getText().toString();
                 String title=etTitle.getText().toString();
                 String Gps=etGps.getText().toString();
 
@@ -66,16 +72,16 @@ public class AddMedicine extends AppCompatActivity {
 
 
                 }
-                if(MedicinePrice.length()<0)
-                {
-                    etMprice.setError("you have to write  MedicinePrice");
-                    isok=false;
+               // if(MedicinePrice.length()<0)
+              //  {
+                //    etMprice.setError("you have to write  MedicinePrice");
+                //    isok=false;
 
-                }
-                if(isok)
+              //  }
+               // if(isok)
                 {
-                    MyMedicine m=new MyMedicine();
-                    m.setPrice(MedicinePrice);
+                //    MyMedicine m=new MyMedicine();
+                  //  m.setPrice(MedicinePrice);
 
                 }
                 if (title.length()<0)
@@ -98,6 +104,10 @@ public class AddMedicine extends AppCompatActivity {
                     MyMedicine m= new MyMedicine();
                     m.setGps(Gps);
                 }
+             //   if (chvisa==)
+             //   {
+
+             //   }
             }
 
 
