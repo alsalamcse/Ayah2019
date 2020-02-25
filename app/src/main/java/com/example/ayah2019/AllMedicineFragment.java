@@ -61,7 +61,7 @@ public class AllMedicineFragment extends Fragment {
         String uid = auth.getUid();
         DatabaseReference reference = database.getReference();
 
-        reference.child("medicines").child(uid).addValueEventListener(new ValueEventListener() {
+        reference.child("medicinesa").child(uid).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 medicineAdapter.clear();
