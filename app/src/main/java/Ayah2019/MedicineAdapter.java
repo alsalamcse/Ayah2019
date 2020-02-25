@@ -28,7 +28,7 @@ import com.google.firebase.database.DatabaseReference;
 public class MedicineAdapter extends ArrayAdapter<MyMedicine>
 {
     public MedicineAdapter(@NonNull Context context) {
-        super(context, R.layout.activity_medicine_item);
+        super(context, R.layout.medicineitem);
 
     }
     @NonNull
