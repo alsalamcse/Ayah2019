@@ -29,6 +29,7 @@ public class MedicineAdapter extends ArrayAdapter<MyMedicine>
 {
     public MedicineAdapter(@NonNull Context context) {
         super(context, R.layout.activity_medicine_item);
+
     }
     @NonNull
     @Override
