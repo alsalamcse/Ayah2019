@@ -24,6 +24,7 @@ public class AddMedicine extends AppCompatActivity {
     private Button btnSave;
     private EditText etMname,etTitle,etGps,etMprice;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +35,7 @@ public class AddMedicine extends AppCompatActivity {
         etMprice = findViewById(R.id.etMprice);
         etTitle= findViewById(R.id.etTitle);
         etGps= findViewById(R.id.etGps);
+
 
 
 
@@ -49,10 +51,9 @@ public class AddMedicine extends AppCompatActivity {
 
             private void dataHandler() {
                 String MedicineName=etMname.getText().toString();
-               String MedicinePrice=etMprice.getText().toString();
+                String MedicinePrice=etMprice.getText().toString();
                 String title=etTitle.getText().toString();
                 String Gps=etGps.getText().toString();
-
 
                 boolean isok=true;
                 if(MedicineName.length()<0)
@@ -70,15 +71,15 @@ public class AddMedicine extends AppCompatActivity {
 
 
                 }
-               if(MedicinePrice.length()<0)
-               {
+                if(MedicinePrice.length()<0)
+              {
                     etMprice.setError("you have to write  MedicinePrice");
                     isok=false;
 
-              }
+                }
                 if(isok)
                 {
-                  MyMedicine m=new MyMedicine();
+                    MyMedicine m=new MyMedicine();
                     m.setPrice(MedicinePrice);
 
                 }

@@ -8,7 +8,7 @@
     tools:context=".All_medicine">
 
         <ListView
-            android:id="@+id/lstmedicine"
+            android:id="@+id/lsmedicine"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
