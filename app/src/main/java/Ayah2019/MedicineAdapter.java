@@ -81,6 +81,7 @@ public class MedicineAdapter extends ArrayAdapter<MyMedicine>
         price.setText(myMedicine.getPrice());
         Gps.setText(myMedicine.getGps());
         name.setText(myMedicine.getName());
+
         cach.setChecked(true);
         credit.setChecked(true);
 
