@@ -88,7 +88,7 @@ public class signinActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> medicine) {
                         if (medicine.isSuccessful()) {
-                            Intent i = new Intent(getApplication(), searchMidicine.class);
+                            Intent i = new Intent(getApplication(), AddMedicine.class);
                             startActivity(i);
                         }
                         else

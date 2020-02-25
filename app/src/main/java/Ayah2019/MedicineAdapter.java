@@ -38,7 +38,8 @@ public class MedicineAdapter extends ArrayAdapter<MyMedicine>
         TextView Gps = vitem.findViewById(R.id.tvGps);
         TextView price = vitem.findViewById(R.id.tvprice);
         TextView name = vitem.findViewById(R.id.tvname);
-
+        CheckBox cach =vitem.findViewById(R.id.cBcash);
+        CheckBox credit=vitem.findViewById(R.id.cBcredit);
 
 
         //  CheckBox  = vitem.findViewById(R.id.itmChbxlsCompleted);
