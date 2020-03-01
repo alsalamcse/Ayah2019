@@ -20,7 +20,7 @@ import Ayah2019.data.MyMedicine;
 
 public class AddMedicine extends AppCompatActivity {
     private Button btnSave;
-    private EditText etMname,etTitle,etGps,etMprice;
+    private EditText etMname,etTitle,etMprice;
 
 
     @Override
@@ -32,7 +32,6 @@ public class AddMedicine extends AppCompatActivity {
         etMname = findViewById(R.id.etMname);
         etMprice = findViewById(R.id.etMprice);
         etTitle= findViewById(R.id.etTitle);
-        etGps= findViewById(R.id.etGps);
 
 
 
@@ -51,7 +50,6 @@ public class AddMedicine extends AppCompatActivity {
                 String MedicineName=etMname.getText().toString();
                 String MedicinePrice=etMprice.getText().toString();
                 String title=etTitle.getText().toString();
-                String Gps=etGps.getText().toString();
 
                 boolean isok=true;
                 if(MedicineName.length()<0)
@@ -91,21 +89,13 @@ public class AddMedicine extends AppCompatActivity {
                     MyMedicine m=new MyMedicine();
                     m.setTitle(title);
                 }
-                if (Gps.length()<0)
-                {
-                    etGps.setError("you have to write Gps");
-                    isok=false;
-                }
-                if (isok)
-                {
-                    MyMedicine m= new MyMedicine();
-                    m.setGps(Gps);
+
                 }
              //   if (chvisa==)
              //   {
 
              //   }
-            }
+
 
 
             private void  creatMyMedicine (MyMedicine m)

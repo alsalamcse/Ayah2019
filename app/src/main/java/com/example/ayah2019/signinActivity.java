@@ -33,8 +33,7 @@ public class signinActivity extends AppCompatActivity {
         btnsignin.setOnClickListener(  new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(getApplication(),AddMedicine.class);
-                startActivity(in);
+
                 dataHndler();
             }
         });
@@ -67,10 +66,10 @@ public class signinActivity extends AppCompatActivity {
                     isOk=false;
                 }
 
-               // if (isOk) {
-                   // signIn(email, passw);
+                if (isOk) {
+                    signIn(email, passw);
 
-              //  }
+                }
             }
 
             public boolean isValidEmailAddress(String email) {

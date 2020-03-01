@@ -7,13 +7,14 @@
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".searchMidicine">
+
     <AutoCompleteTextView
         android:id="@+id/actv"
-        android:layout_width="match_parent"
+        android:layout_width="277dp"
         android:layout_height="wrap_content"
-        android:hint="select a medicine"
+        android:completionHint="select a medicine"
         android:completionThreshold="1"
-        android:completionHint="select a medicine"/>
+        android:hint="select a medicine" />
 
 
 </LinearLayout>
