@@ -8,8 +8,10 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.viewpager.widget.ViewPager;
 
 import android.view.View;
+import android.view.ViewParent;
 
 public class MainMedicine extends AppCompatActivity {
 
@@ -19,6 +21,9 @@ public class MainMedicine extends AppCompatActivity {
         setContentView(R.layout.activity_main_medicine);
 //        Toolbar toolbar = findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
+
+        //ViewPager viewPager=findViewById(R.id.view_pager);
+       // viewPager.setAdapter(sec);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

@@ -26,13 +26,13 @@ public class MedicineAdapter extends ArrayAdapter<MyMedicine>
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View vitem = LayoutInflater.from(getContext()).inflate(R.layout.activity_all_medicineadapter, parent, false);
-        final TextView title = vitem.findViewById(R.id.tvtitle);
-        TextView Gps = vitem.findViewById(R.id.tvGps);
-        TextView price = vitem.findViewById(R.id.tvprice);
-        TextView name = vitem.findViewById(R.id.tvname);
-        CheckBox cach =vitem.findViewById(R.id.cBcash);
-        CheckBox credit=vitem.findViewById(R.id.cBcredit);
+        View vitem = LayoutInflater.from(getContext()).inflate(R.layout.medicineitem, parent, false);
+        final TextView title = vitem.findViewById(R.id.Mtitle);
+       // TextView Gps = vitem.findViewById(R.id.tvGps);
+        TextView price = vitem.findViewById(R.id.Mprice);
+        TextView name = vitem.findViewById(R.id.Mname);
+      //  CheckBox cach =vitem.findViewById(R.id.cBcash);
+       /// CheckBox credit=vitem.findViewById(R.id.cBcredit);
 
 
         //  CheckBox  = vitem.findViewById(R.id.itmChbxlsCompleted);
@@ -72,11 +72,11 @@ public class MedicineAdapter extends ArrayAdapter<MyMedicine>
 
         title.setText(myMedicine.getTitle());
         price.setText(myMedicine.getPrice());
-        Gps.setText(myMedicine.getGps());
+       // Gps.setText(myMedicine.getGps());
         name.setText(myMedicine.getName());
 
-        cach.setChecked(true);
-        credit.setChecked(true);
+        //cach.setChecked(true);
+       // credit.setChecked(true);
 
 
         // chIsComplete.setChecked(false);
