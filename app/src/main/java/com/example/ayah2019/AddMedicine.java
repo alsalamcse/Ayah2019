@@ -3,7 +3,6 @@ package com.example.ayah2019;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,7 +19,7 @@ import Ayah2019.data.MyMedicine;
 
 public class AddMedicine extends AppCompatActivity {
     private Button btnSave;
-    private EditText etMname,etTitle,etMprice;
+    private EditText etMname,etAmount,etMprice;
 
 
     @Override
@@ -31,7 +30,8 @@ public class AddMedicine extends AppCompatActivity {
         btnSave = findViewById(R.id.btnSave);
         etMname = findViewById(R.id.etMname);
         etMprice = findViewById(R.id.etMprice);
-        etTitle= findViewById(R.id.etTitle);
+        etAmount= findViewById(R.id.etAmount);
+
 
 
 
@@ -49,7 +49,7 @@ public class AddMedicine extends AppCompatActivity {
             private void dataHandler() {
                 String MedicineName=etMname.getText().toString();
                 String MedicinePrice=etMprice.getText().toString();
-                String title=etTitle.getText().toString();
+                String MedicineAmount=etAmount.getText().toString();
 
                 boolean isok=true;
                 if(MedicineName.length()<0)
@@ -79,15 +79,15 @@ public class AddMedicine extends AppCompatActivity {
                     m.setPrice(MedicinePrice);
 
                 }
-                if (title.length()<0)
+                if (MedicineAmount.length()<0)
                 {
-                    etTitle.setError("you have to write title");
+                    etAmount.setError("you have to write title");
                     isok=false;
                 }
                 if (isok)
                 {
                     MyMedicine m=new MyMedicine();
-                    m.setTitle(title);
+                    m.setAmount(MedicineAmount);
                 }
 
                 }

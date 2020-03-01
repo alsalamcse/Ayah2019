@@ -31,14 +31,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etTitle"
+        android:id="@+id/etAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="58dp"
+        android:layout_marginTop="56dp"
         android:ems="10"
-        android:hint="title"
+        android:hint="Amount"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="@+id/etMname"
         app:layout_constraintTop_toBottomOf="@+id/etMname" />
@@ -51,9 +51,9 @@
         android:ems="10"
         android:hint="Price"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/etTitle"
-        app:layout_constraintStart_toStartOf="@+id/etTitle"
-        app:layout_constraintTop_toBottomOf="@+id/etTitle" />
+        app:layout_constraintEnd_toEndOf="@+id/etAmount"
+        app:layout_constraintStart_toStartOf="@+id/etAmount"
+        app:layout_constraintTop_toBottomOf="@+id/etAmount" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
