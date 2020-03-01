@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,7 +26,7 @@ public class MedicineAdapter extends ArrayAdapter<MyMedicine>
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View vitem = LayoutInflater.from(getContext()).inflate(R.layout.medicineitem, parent, false);
-        final TextView title = vitem.findViewById(R.id.Mtitle);
+        final TextView amount = vitem.findViewById(R.id.Mamount);
        // TextView Gps = vitem.findViewById(R.id.tvGps);
         TextView price = vitem.findViewById(R.id.Mprice);
         TextView name = vitem.findViewById(R.id.Mname);
@@ -70,7 +69,7 @@ public class MedicineAdapter extends ArrayAdapter<MyMedicine>
 
 
 
-        title.setText(myMedicine.getTitle());
+        amount.setText(myMedicine.getAmount());
         price.setText(myMedicine.getPrice());
        // Gps.setText(myMedicine.getGps());
         name.setText(myMedicine.getName());
