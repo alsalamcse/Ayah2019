@@ -1,4 +1,4 @@
-package Ayah2019;
+package Ayah2019.data;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;

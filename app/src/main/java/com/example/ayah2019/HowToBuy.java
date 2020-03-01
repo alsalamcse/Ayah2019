@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import Ayah2019.MedicineAdapter;
+import Ayah2019.data.MedicineAdapter;
 
 public class HowToBuy extends AppCompatActivity {
     private Button btnBalone;

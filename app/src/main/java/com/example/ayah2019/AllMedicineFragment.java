@@ -19,8 +19,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import Ayah2019.MedicineAdapter;
-import Ayah2019.MyMedicine;
+import Ayah2019.data.MedicineAdapter;
+import Ayah2019.data.MyMedicine;
 
 
 /**
@@ -28,7 +28,7 @@ import Ayah2019.MyMedicine;
  */
 public class AllMedicineFragment extends Fragment {
     private MedicineAdapter medicineAdapter;
-    private ListView lvmedicine;
+    private ListView lsvmedicine;
 
 
     public AllMedicineFragment() {
@@ -42,8 +42,8 @@ public class AllMedicineFragment extends Fragment {
         // Inflate the layout for this fragment
         medicineAdapter = new MedicineAdapter(getContext());
         View view = inflater.inflate(R.layout.fragment_all_medicine, container, false);
-        lvmedicine = view.findViewById(R.id.lsvMedicine);
-        lvmedicine.setAdapter(medicineAdapter);
+        lsvmedicine = view.findViewById(R.id.lsvMedicine);
+        lsvmedicine.setAdapter(medicineAdapter);
         return view;
 
         //return inflater.inflate(R.layout.fragment_all_medicine, container, false);
@@ -61,7 +61,7 @@ public class AllMedicineFragment extends Fragment {
         String uid = auth.getUid();
         DatabaseReference reference = database.getReference();
 
-        reference.child("medicinesa").child(uid).addValueEventListener(new ValueEventListener() {
+        reference.child("medicines").child(uid).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 medicineAdapter.clear();

@@ -1,4 +1,4 @@
-package Ayah2019;
+package Ayah2019.data;
 
 public class MyMedicine {
 

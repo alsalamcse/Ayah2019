@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -17,8 +16,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import Ayah2019.MedicineAdapter;
-import Ayah2019.MyMedicine;
+import Ayah2019.data.MyMedicine;
 
 public class AddMedicine extends AppCompatActivity {
     private Button btnSave;
@@ -43,8 +41,8 @@ public class AddMedicine extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 dataHandler();
-                Intent i = new Intent(getApplication(), searchMidicine.class);
-                startActivity(i);
+             //   Intent i = new Intent(getApplication(),AllMedicineFragment.class);
+             //   startActivity(i);
             }
         });
     }
