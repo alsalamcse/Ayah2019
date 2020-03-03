@@ -18,6 +18,9 @@ import Ayah2019.data.FirebaseUtils;
 import Ayah2019.data.MedicineAdapter;
 import Ayah2019.data.MyMedicine;
 
+//5 new activity
+//5.1 add Listview to the xml
+
 public class MyMedicineActivity extends AppCompatActivity {
     //5.2
     private ListView listView;
@@ -49,7 +52,7 @@ public class MyMedicineActivity extends AppCompatActivity {
                 //**fe al datachange m3alg al7dth
                 for (DataSnapshot d:dataSnapshot.getChildren()) {
                     MyMedicine t=d.getValue(MyMedicine.class);
-                    Log.d("MyTask",t.toString());
+                    Log.d("My Medicine",t.toString());
                     medicineAdapter.add(t);
 
                 }
