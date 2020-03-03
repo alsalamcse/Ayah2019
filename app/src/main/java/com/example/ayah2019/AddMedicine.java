@@ -91,10 +91,6 @@ public class AddMedicine extends AppCompatActivity {
                }
 
                 }
-             //   if (chvisa==)
-             //   {
-
-             //   }
 
 
 
