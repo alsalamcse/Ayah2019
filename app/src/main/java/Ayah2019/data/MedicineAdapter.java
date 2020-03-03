@@ -27,10 +27,10 @@ public class MedicineAdapter extends ArrayAdapter<MyMedicine>
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View vitem = LayoutInflater.from(getContext()).inflate(R.layout.medicineitem, parent, false);
-        final TextView amount = vitem.findViewById(R.id.Mamount);
+        final TextView amount = vitem.findViewById(R.id.textView5);
 
-        TextView price = vitem.findViewById(R.id.Mprice);
-        TextView name = vitem.findViewById(R.id.Mname);
+        TextView price = vitem.findViewById(R.id.textView2);
+        TextView name = vitem.findViewById(R.id.textView5);
 
 
 

@@ -19,7 +19,7 @@ import com.example.ayah2019.ui.main.RemovedFragment;
 public class MyFragmentsPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
-    private static final int[] TAB_TITLES = new int[]{"all med"};//3naween
+    private static final int[] TAB_TITLES = new int[]{ };//3naween
     private final Context mContext;
     //1
     private AllMedicineFragment allMedicineFragment;

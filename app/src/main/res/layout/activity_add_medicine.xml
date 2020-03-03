@@ -55,5 +55,15 @@
         app:layout_constraintStart_toStartOf="@+id/etAmount"
         app:layout_constraintTop_toBottomOf="@+id/etAmount" />
 
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="title"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="464dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
