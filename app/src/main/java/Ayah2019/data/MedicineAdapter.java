@@ -10,13 +10,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
 import com.example.ayah2019.R;
-
+//1                                          //2
 public class MedicineAdapter extends ArrayAdapter<MyMedicine>
 {
     public MedicineAdapter(@NonNull Context context) {
@@ -25,12 +25,15 @@ public class MedicineAdapter extends ArrayAdapter<MyMedicine>
     }
     @NonNull
     @Override
+    //3
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View vitem = LayoutInflater.from(getContext()).inflate(R.layout.medicineitem, parent, false);
-        final TextView amount = vitem.findViewById(R.id.textView5);
+        final TextView amount = vitem.findViewById(R.id.Mamount);
 
-        TextView price = vitem.findViewById(R.id.textView2);
-        TextView name = vitem.findViewById(R.id.textView5);
+        TextView price = vitem.findViewById(R.id.Mprice);
+        TextView name = vitem.findViewById(R.id.Mname);
+        ImageView ivInfo = vitem.findViewById(R.id.imageM);
+
 
 
 
