@@ -59,11 +59,14 @@
         android:id="@+id/etTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="46dp"
         android:ems="10"
+        android:hint="title"
         android:inputType="textPersonName"
-        android:text="title"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="464dp" />
+        app:layout_constraintStart_toStartOf="@+id/etMprice"
+        app:layout_constraintTop_toBottomOf="@+id/etMprice" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

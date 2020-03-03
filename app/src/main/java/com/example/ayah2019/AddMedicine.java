@@ -20,7 +20,7 @@ import Ayah2019.data.MyMedicine;
 
 public class AddMedicine extends AppCompatActivity {
     private Button btnSave;
-    private EditText etMname,etTitle,etMprice;
+    private EditText etMname,etTitle,etMprice, etAmount;
 
 
     @Override
@@ -32,6 +32,7 @@ public class AddMedicine extends AppCompatActivity {
         etMname = findViewById(R.id.etMname);
         etMprice = findViewById(R.id.etMprice);
         etTitle= findViewById(R.id.etTitle);
+        etAmount=findViewById(R.id.etAmount);
 
 
 
@@ -50,6 +51,7 @@ public class AddMedicine extends AppCompatActivity {
                 String MedicineName=etMname.getText().toString();
                 String MedicinePrice=etMprice.getText().toString();
                 String title=etTitle.getText().toString();
+                String amount=etAmount.getText().toString();
 
                 boolean isok=true;
                 if(MedicineName.length()<0)
@@ -89,6 +91,17 @@ public class AddMedicine extends AppCompatActivity {
                     MyMedicine m=new MyMedicine();
                     m.setTitle(title);
                }
+
+                if (amount.length()<0)
+                {
+                    etAmount.setError("you have to write title");
+                    isok=false;
+                }
+                if (isok)
+                {
+                    MyMedicine m=new MyMedicine();
+                    m.setAmount(amount);
+                }
 
                 }
              //   if (chvisa==)

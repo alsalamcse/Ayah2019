@@ -23,10 +23,12 @@ public class MedicineAdapter extends ArrayAdapter<MyMedicine>
         super(context, R.layout.medicineitem);
 
     }
+    //override getview
     @NonNull
     @Override
     //3
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        //build item XML view
         View vitem = LayoutInflater.from(getContext()).inflate(R.layout.medicineitem, parent, false);
          TextView amount = vitem.findViewById(R.id.Mamount);
 
@@ -43,7 +45,7 @@ public class MedicineAdapter extends ArrayAdapter<MyMedicine>
         name.setText(myMedicine.getName());
 
 
-
+      //return view
         return vitem;
     }
     public void ShowMenu ()
