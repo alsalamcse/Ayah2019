@@ -38,46 +38,12 @@ public class MedicineAdapter extends ArrayAdapter<MyMedicine>
 
          MyMedicine myMedicine = getItem(position);
 
-       // chIsComplete.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-           // @Override
-           // public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-               // if (isChecked) {
-                    //todo delete this item
-                   // FirebaseU.getReference().child(myMedicine.getKey()).removeValue(new DatabaseReference.CompletionListener() {
-                     //   @Override
-                      //  public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
-                         //   if (databaseError == null) {
-                            //    Toast.makeText(getContext(), "delete", Toast.LENGTH_SHORT).show();
-                           // } else {
-                          //      Toast.makeText(getContext(), "not delete", Toast.LENGTH_SHORT).show();
-                          //  }
-                       // }
-                  //  });
-              //  }
-
-          //  }
-       // });
-       // ivInfo.setOnClickListener(new View.OnClickListener() {
-           // @Override
-          //  public void onClick(View v)
-         //   {
-         //       Toast.makeText(getContext(), myMedicine.getTittle(), Toast.LENGTH_SHORT).show();
-          //     ShowMenu();
-         //   }
-       // });
-
-
-
         amount.setText(myMedicine.getAmount());
         price.setText(myMedicine.getPrice());
-       // Gps.setText(myMedicine.getGps());
         name.setText(myMedicine.getName());
 
-      //  cach.setChecked(true);
-     //   credit.setChecked(true);
 
 
-        // chIsComplete.setChecked(false);
         return vitem;
     }
     public void ShowMenu ()
