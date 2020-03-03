@@ -26,8 +26,9 @@ public class MainMedicine extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Add medicine", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                Intent i= new Intent(getApplication(),AddMedicine.class);
-                startActivity(i);
+              //  Intent i=new Intent(getA)
+               // Intent i= new Intent(getApplication(),AddMedicine.class);
+               // startActivity(i);
 
             }
         });
