@@ -79,16 +79,16 @@ public class AddMedicine extends AppCompatActivity {
                     m.setPrice(MedicinePrice);
 
                 }
-                if (title.length()<0)
-                {
-                    etTitle.setError("you have to write title");
-                    isok=false;
-                }
-                if (isok)
-                {
-                    MyMedicine m=new MyMedicine();
-                    m.setTitle(title);
-                }
+//                if (title.length()<0)
+//                {
+//                    etTitle.setError("you have to write title");
+//                    isok=false;
+//                }
+             //   if (isok)
+                //{
+                  //  MyMedicine m=new MyMedicine();
+                //    m.setTitle(title);
+            //    }
 
                 }
              //   if (chvisa==)
