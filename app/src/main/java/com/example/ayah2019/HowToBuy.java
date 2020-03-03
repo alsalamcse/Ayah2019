@@ -41,3 +41,7 @@ public class HowToBuy extends AppCompatActivity {
         });
     }
 }
+
+
+
+

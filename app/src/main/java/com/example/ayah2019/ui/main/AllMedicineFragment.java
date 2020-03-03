@@ -82,3 +82,5 @@ public class AllMedicineFragment extends Fragment {
         });
     }
 }
+
+

@@ -50,3 +50,5 @@ public class welcomescreen extends AppCompatActivity {
         setContentView(R.layout.activity_welcomescreen);
     }
 }
+
+

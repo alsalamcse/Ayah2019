@@ -14,3 +14,6 @@ public class  Location extends AppCompatActivity {
         setContentView(R.layout.activity_location);
     }
 }
+
+
+

@@ -28,16 +28,15 @@ public class MedicineAdapter extends ArrayAdapter<MyMedicine>
     //3
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View vitem = LayoutInflater.from(getContext()).inflate(R.layout.medicineitem, parent, false);
-        final TextView amount = vitem.findViewById(R.id.Mamount);
+         TextView amount = vitem.findViewById(R.id.Mamount);
 
         TextView price = vitem.findViewById(R.id.Mprice);
         TextView name = vitem.findViewById(R.id.Mname);
-        ImageView ivInfo = vitem.findViewById(R.id.imageM);
 
 
 
 
-        final MyMedicine myMedicine = getItem(position);
+         MyMedicine myMedicine = getItem(position);
 
        // chIsComplete.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
            // @Override

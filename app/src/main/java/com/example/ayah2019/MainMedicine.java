@@ -35,3 +35,6 @@ public class MainMedicine extends AppCompatActivity {
     }
 
 }
+
+
+

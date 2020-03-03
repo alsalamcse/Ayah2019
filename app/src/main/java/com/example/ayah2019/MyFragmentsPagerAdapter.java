@@ -68,3 +68,5 @@ public class MyFragmentsPagerAdapter extends FragmentPagerAdapter {
         return 2;
     }
 }
+
+

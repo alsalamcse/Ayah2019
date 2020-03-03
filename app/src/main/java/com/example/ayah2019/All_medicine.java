@@ -14,3 +14,6 @@ public class All_medicine extends AppCompatActivity {
         setContentView(R.layout.activity_all_medicine);
     }
 }
+
+
+
