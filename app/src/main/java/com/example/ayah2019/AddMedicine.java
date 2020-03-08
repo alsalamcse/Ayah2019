@@ -54,7 +54,7 @@ public class AddMedicine extends AppCompatActivity {
                 String amount=etAmount.getText().toString();
 
                 boolean isok=true;
-                if(MedicineName.length()<0)
+                if(MedicineName.length()<1)
                 {
                     etMname.setError("you have to write  MedicineName");
                     isok=false;
@@ -81,7 +81,7 @@ public class AddMedicine extends AppCompatActivity {
                     m.setPrice(MedicinePrice);
 
                 }
-                if (title.length()<0)
+                if (title.length()<1)
                 {
                     etTitle.setError("you have to write title");
                    isok=false;
@@ -92,7 +92,7 @@ public class AddMedicine extends AppCompatActivity {
                     m.setTitle(title);
                }
 
-                if (amount.length()<0)
+                if (amount.length()<1)
                 {
                     etAmount.setError("you have to write title");
                     isok=false;
@@ -104,10 +104,6 @@ public class AddMedicine extends AppCompatActivity {
                 }
 
                 }
-             //   if (chvisa==)
-             //   {
-
-             //   }
 
 
 

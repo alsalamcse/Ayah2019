@@ -33,6 +33,8 @@ public class signinActivity extends AppCompatActivity {
         btnsignin.setOnClickListener(  new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i = new Intent(getApplication(), AddMedicine.class);
+                startActivity(i);
 
                 dataHndler();
             }
