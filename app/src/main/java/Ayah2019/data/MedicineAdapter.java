@@ -50,7 +50,7 @@ public class MedicineAdapter extends ArrayAdapter<MyMedicine>
     }
 
 
-//    public void ShowMenu ()
+//   public void ShowMenu ()
 //    {
 //        final String[] option = {"Add", "View", "Select", "Delete"};
 //        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.select_dialog_item);
@@ -84,8 +84,8 @@ public class MedicineAdapter extends ArrayAdapter<MyMedicine>
 //        });
 //        final AlertDialog a = builder.create();
 //        a.show();
-//
-//    }
+
+   // }
 
 
 
