@@ -34,7 +34,7 @@ public class MedicineAdapter extends ArrayAdapter<MyMedicine>
         //4.2
         //.findViewById
         TextView amount = vitem.findViewById(R.id.Mamount);
-
+       // final TextView tvtitle=vitem.findViewById(R.id.)
         TextView price = vitem.findViewById(R.id.Mprice);
         TextView name = vitem.findViewById(R.id.Mname);
 
