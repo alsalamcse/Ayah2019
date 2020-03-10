@@ -41,8 +41,7 @@ public class AddMedicine extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 dataHandler();
-             //   Intent i = new Intent(getApplication(),AllMedicineFragment.class);
-             //   startActivity(i);
+
             }
         });
     }
