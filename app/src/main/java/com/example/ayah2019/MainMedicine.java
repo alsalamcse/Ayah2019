@@ -19,9 +19,8 @@ public class MainMedicine extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_medicine);
-//        Toolbar toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-        com.example.ayah2019.ui.main.MyFragmentsPagerAdapter.MyFragmentsPagerAdapter sectionsPagerAdapter=new MyFragmentsPagerAdapter.MyFragmentsPagerAdapter(this,getSupportFragmentManager());
+
+        MyFragmentsPagerAdapter sectionsPagerAdapter=new MyFragmentsPagerAdapter(this,getSupportFragmentManager());
         ViewPager viewPager=findViewById(R.id.view_pager);
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs=findViewById(R.id.tabs);
@@ -33,8 +32,8 @@ public class MainMedicine extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Add medicine", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                Intent i= new Intent(getApplication(),AddMedicine.class);
-                startActivity(i);
+                Intent intent= new Intent(MainMedicine.this,AddMedicine.class);
+                startActivity(intent);
 
             }
         });

@@ -100,6 +100,7 @@ public class AddMedicine extends AppCompatActivity {
                 {
                     MyMedicine m=new MyMedicine();
                     m.setAmount(amount);
+                    creatMyMedicine(m);
                 }
 
                 }
