@@ -41,8 +41,7 @@ public class AddMedicine extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 dataHandler();
-             //   Intent i = new Intent(getApplication(),AllMedicineFragment.class);
-             //   startActivity(i);
+
             }
         });
     }
@@ -119,17 +118,17 @@ public class AddMedicine extends AppCompatActivity {
                 reference.child(uid).child("medicine").child(key).setValue(m);
                 reference.child("medicine").child(uid).child(key).setValue(m).addOnCompleteListener(AddMedicine.this, new OnCompleteListener<Void>() {
                     @Override
-                    public void onComplete(@NonNull Task<Void> task)
+                    public void onComplete(@NonNull Task<Void> medicine)
                     {
-                        if (task.isSuccessful())
+                        if (medicine.isSuccessful())
                         {
                             Toast.makeText(AddMedicine.this,"add sucessful",Toast.LENGTH_SHORT).show();
                             finish();
                         }
                         else
                         {
-                            Toast.makeText(AddMedicine.this,"add falied"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
-                            task.getException().printStackTrace();
+                            Toast.makeText(AddMedicine.this,"add falied"+medicine.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                            medicine.getException().printStackTrace();
                         }
                     }
                 });
