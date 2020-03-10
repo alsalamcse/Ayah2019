@@ -46,11 +46,7 @@ public class signupActivity extends AppCompatActivity {
         String passwl = etPassword1.getText().toString();
         String passw2 = etPassword2.getText().toString();
         String fname = etFname.getText().toString();
-
-
         String lname = etLname.getText().toString();
-
-
         String phone = etPhone.getText().toString();
        // boolean isok=true;
 

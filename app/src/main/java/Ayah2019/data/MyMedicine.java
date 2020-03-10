@@ -7,6 +7,8 @@ public class MyMedicine {
     private String price;
     private String amount;
     private String title;
+    private String key;
+    private String owner;
 
     public String getName() {
         return name;
@@ -41,6 +43,22 @@ public class MyMedicine {
         this.title = title;
     }
 
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
+
     @Override
     public String toString() {
         return "MyMedicine{" +
@@ -48,6 +66,8 @@ public class MyMedicine {
                 ", price='" + price + '\'' +
                 ", amount='" + amount + '\'' +
                 ", title='" + title + '\'' +
+                ", key='" + key + '\'' +
+                ", owner='" + owner + '\'' +
                 '}';
     }
 }
