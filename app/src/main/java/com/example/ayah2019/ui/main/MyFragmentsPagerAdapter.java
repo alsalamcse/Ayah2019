@@ -56,5 +56,13 @@ public class MyFragmentsPagerAdapter extends FragmentPagerAdapter {
         // Show 2 total pages.
         return 2;
     }
+
+    /**
+     * A [FragmentPagerAdapter] that returns a fragment corresponding to
+     * one of the sections/tabs/pages.
+     */
+
+
+
 }
 
