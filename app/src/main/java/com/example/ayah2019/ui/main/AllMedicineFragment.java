@@ -67,6 +67,7 @@ public class AllMedicineFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 medicineAdapter.clear();
+                //**fe al datachange m3alg al7dth
                 for (DataSnapshot d : dataSnapshot.getChildren()) {
                     MyMedicine m = d.getValue(MyMedicine.class);
                     Log.d("MyMedicine", m.toString());
