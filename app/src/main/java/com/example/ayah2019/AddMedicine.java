@@ -113,9 +113,9 @@ public class AddMedicine extends AppCompatActivity {
                 DatabaseReference reference = database.getReference();
                 FirebaseAuth auth = FirebaseAuth.getInstance();
                 String uid = auth.getCurrentUser().getUid();
-                m.setOwner(uid);
+                m.setName(uid);
                 String key = reference.child("medicine").push().getKey();
-                m.setKey(key);
+                m.setPrice(key);
                 reference.child(uid).child("medicine").child(key).setValue(m);
                 reference.child("medicine").child(uid).child(key).setValue(m).addOnCompleteListener(AddMedicine.this, new OnCompleteListener<Void>() {
                     @Override
