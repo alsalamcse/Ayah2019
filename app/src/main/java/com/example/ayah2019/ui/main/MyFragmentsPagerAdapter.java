@@ -1,13 +1,17 @@
 package com.example.ayah2019.ui.main;
 
 import android.content.Context;
+import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.PagerAdapter;
 
+import com.example.ayah2019.MainMedicine;
 import com.example.ayah2019.R;
 
 /**
@@ -57,6 +61,9 @@ public class MyFragmentsPagerAdapter extends FragmentPagerAdapter {
         return 2;
     }
 
+
+    }
+
     /**
      * A [FragmentPagerAdapter] that returns a fragment corresponding to
      * one of the sections/tabs/pages.
@@ -64,5 +71,5 @@ public class MyFragmentsPagerAdapter extends FragmentPagerAdapter {
 
 
 
-}
+
 

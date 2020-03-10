@@ -32,7 +32,7 @@ public class MainMedicine extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Add medicine", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                Intent intent= new Intent(MainMedicine.this,AddMedicine.class);
+                Intent intent=new Intent(getApplication(),AddMedicine.class);
                 startActivity(intent);
 
             }

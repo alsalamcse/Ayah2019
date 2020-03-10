@@ -44,8 +44,6 @@ public class MedicineAdapter extends ArrayAdapter<MyMedicine>
         amount.setText(myMedicine.getAmount());
         price.setText(myMedicine.getPrice());
         name.setText(myMedicine.getName());
-
-
         return vitem;
     }
 

@@ -33,7 +33,7 @@ public class signinActivity extends AppCompatActivity {
         btnsignin.setOnClickListener(  new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplication(), AddMedicine.class);
+                Intent i = new Intent(getApplication(), MainMedicine.class);
                 startActivity(i);
 
                 dataHndler();
@@ -89,7 +89,7 @@ public class signinActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> medicine) {
                         if (medicine.isSuccessful()) {
-                            Intent i = new Intent(getApplication(), AddMedicine.class);
+                            Intent i = new Intent(getApplication(), MainMedicine.class);
                             startActivity(i);
                         }
                         else
