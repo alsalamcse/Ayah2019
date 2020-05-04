@@ -3,6 +3,7 @@ package com.example.ayah2019;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +20,7 @@ import Ayah2019.data.MyMedicine;
 
 public class AddMedicine extends AppCompatActivity {
     private Button btnSave;
-    private EditText etMname,etAmount,etMprice,etTitle;
+    private EditText etMname,etTitle,etMprice, etAmount;
 
 
     @Override
@@ -30,9 +31,8 @@ public class AddMedicine extends AppCompatActivity {
         btnSave = findViewById(R.id.btnSave);
         etMname = findViewById(R.id.etMname);
         etMprice = findViewById(R.id.etMprice);
-        etAmount= findViewById(R.id.etAmount);
-        etTitle=findViewById(R.id.etTitle);
-
+        etTitle= findViewById(R.id.etTitle);
+        etAmount=findViewById(R.id.etAmount);
 
 
 
@@ -41,8 +41,7 @@ public class AddMedicine extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 dataHandler();
-             //   Intent i = new Intent(getApplication(),AllMedicineFragment.class);
-             //   startActivity(i);
+
             }
         });
     }
@@ -50,11 +49,11 @@ public class AddMedicine extends AppCompatActivity {
             private void dataHandler() {
                 String MedicineName=etMname.getText().toString();
                 String MedicinePrice=etMprice.getText().toString();
-                String amount=etAmount.getText().toString();
                 String title=etTitle.getText().toString();
+                String amount=etAmount.getText().toString();
 
                 boolean isok=true;
-                if(MedicineName.length()<0)
+                if(MedicineName.length()<1)
                 {
                     etMname.setError("you have to write  MedicineName");
                     isok=false;
@@ -81,32 +80,30 @@ public class AddMedicine extends AppCompatActivity {
                     m.setPrice(MedicinePrice);
 
                 }
-             if (amount.length()<0)
-               {
-                    etAmount.setError("you have to write title");
-                   isok=false;
-                }
-                if (isok)
-               {
-                    MyMedicine m=new MyMedicine();
-                    m.setAmount(amount);
-                }
-                if (title.length()<0)
+                if (title.length()<1)
                 {
                     etTitle.setError("you have to write title");
-                    isok=false;
+                   isok=false;
                 }
                 if (isok)
                 {
                     MyMedicine m=new MyMedicine();
                     m.setTitle(title);
+               }
+
+                if (amount.length()<1)
+                {
+                    etAmount.setError("you have to write title");
+                    isok=false;
+                }
+                if (isok)
+                {
+                    MyMedicine m=new MyMedicine();
+                    m.setAmount(amount);
+                    creatMyMedicine(m);
                 }
 
                 }
-             //   if (chvisa==)
-             //   {
-
-             //   }
 
 
 
@@ -122,17 +119,17 @@ public class AddMedicine extends AppCompatActivity {
                 reference.child(uid).child("medicine").child(key).setValue(m);
                 reference.child("medicine").child(uid).child(key).setValue(m).addOnCompleteListener(AddMedicine.this, new OnCompleteListener<Void>() {
                     @Override
-                    public void onComplete(@NonNull Task<Void> task)
+                    public void onComplete(@NonNull Task<Void> medicine)
                     {
-                        if (task.isSuccessful())
+                        if (medicine.isSuccessful())
                         {
                             Toast.makeText(AddMedicine.this,"add sucessful",Toast.LENGTH_SHORT).show();
                             finish();
                         }
                         else
                         {
-                            Toast.makeText(AddMedicine.this,"add falied"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
-                            task.getException().printStackTrace();
+                            Toast.makeText(AddMedicine.this,"add falied"+medicine.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                            medicine.getException().printStackTrace();
                         }
                     }
                 });

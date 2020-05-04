@@ -46,11 +46,7 @@ public class signupActivity extends AppCompatActivity {
         String passwl = etPassword1.getText().toString();
         String passw2 = etPassword2.getText().toString();
         String fname = etFname.getText().toString();
-
-
         String lname = etLname.getText().toString();
-
-
         String phone = etPhone.getText().toString();
        // boolean isok=true;
 
@@ -85,8 +81,8 @@ public class signupActivity extends AppCompatActivity {
         FirebaseAuth auth=FirebaseAuth.getInstance();
         auth.createUserWithEmailAndPassword(email,passwl).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                    if(task.isSuccessful())
+            public void onComplete(@NonNull Task<AuthResult> medicine) {
+                    if(medicine.isSuccessful())
                     {
                         Toast.makeText(signupActivity.this, "sign up successful", Toast.LENGTH_SHORT).show();
                         finish();

@@ -1,16 +1,18 @@
-package com.example.ayah2019;
+package com.example.ayah2019.ui.main;
 
 import android.content.Context;
+import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.PagerAdapter;
 
-import com.example.ayah2019.ui.main.AllMedicineFragment;
-import com.example.ayah2019.ui.main.HistoryFragment;
-import com.example.ayah2019.ui.main.RemovedFragment;
+import com.example.ayah2019.MainMedicine;
+import com.example.ayah2019.R;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
@@ -19,9 +21,9 @@ import com.example.ayah2019.ui.main.RemovedFragment;
 public class MyFragmentsPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
-    private static final int[] TAB_TITLES = new int[]{ };//3naween
+    private static final int[] TAB_TITLES = new int[]{R.string.title_activity_medicine_item, R.string.title_activity_main_medicine};
     private final Context mContext;
-    //1
+    //1.
     private AllMedicineFragment allMedicineFragment;
     private HistoryFragment historyFragment;
     private RemovedFragment removedFragment;
@@ -29,28 +31,19 @@ public class MyFragmentsPagerAdapter extends FragmentPagerAdapter {
     public MyFragmentsPagerAdapter(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
-        //2
-        allMedicineFragment=new AllMedicineFragment();
-        historyFragment=new HistoryFragment();
-        removedFragment=new RemovedFragment();
-
+        allMedicineFragment= new AllMedicineFragment();
+        historyFragment = new HistoryFragment();
+        removedFragment = new RemovedFragment();
     }
 
     @Override
-    public Fragment getItem(int position)//rakm al tap(fragment)
-    {
+    public Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
-        /*
-     (  arja3 alfragment )
-         */
-
         if (position==0)
             return allMedicineFragment;
-
         if (position==1)
             return historyFragment;
-
         if (position==2)
             return removedFragment;
         return null;
@@ -67,6 +60,16 @@ public class MyFragmentsPagerAdapter extends FragmentPagerAdapter {
         // Show 2 total pages.
         return 2;
     }
-}
+
+
+    }
+
+    /**
+     * A [FragmentPagerAdapter] that returns a fragment corresponding to
+     * one of the sections/tabs/pages.
+     */
+
+
+
 
 

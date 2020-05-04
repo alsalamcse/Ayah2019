@@ -20,13 +20,13 @@ public class welcomescreen extends AppCompatActivity {
                     sleep(3*1000);
                     FirebaseAuth auth=FirebaseAuth.getInstance();
                     if(auth.getCurrentUser()!=null||auth.getCurrentUser().getEmail()!=null){
-                        Intent i=new Intent(getApplication(),AddMedicine.class);
+                        Intent i=new Intent(getApplication(),signinActivity.class);
                         startActivity(i);
                         finish();
                     }
                     else
                     {
-                        Intent i=new Intent(getApplication(),signinActivity.class);
+                        Intent i=new Intent(getApplication(),MainMedicine.class);
                         startActivity(i);
                         finish();
 

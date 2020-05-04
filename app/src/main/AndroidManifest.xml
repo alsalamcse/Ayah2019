@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".TempAllMedicineActivity"></activity>
+        <activity android:name=".MyMedicineActivity" />
         <activity
             android:name=".MainMedicine"
             android:label="@string/title_activity_main_medicine"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".All_medicine" />
         <activity android:name=".Location" />
         <activity android:name=".HowToBuy" />
