@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 public class All_medicine extends AppCompatActivity {
-  //  private MedicineAdapter medicineAdapter;
+   // private MedicineAdapter medicineAdapter;
     //private ListView lstmedicine;
 
     @Override

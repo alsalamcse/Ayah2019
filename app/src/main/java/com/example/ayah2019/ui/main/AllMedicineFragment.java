@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.ayah2019.R;
@@ -31,6 +33,8 @@ import Ayah2019.data.MyMedicine;
 public class AllMedicineFragment extends Fragment {
     private MedicineAdapter medicineAdapter;
     private ListView lsvmedicine;
+    private ImageView imSearch;
+    private EditText etTitleToSearch;
 
 
     public AllMedicineFragment() {
@@ -45,6 +49,16 @@ public class AllMedicineFragment extends Fragment {
         medicineAdapter = new MedicineAdapter(getContext());
         View view = inflater.inflate(R.layout.fragment_all_medicine, container, false);
         lsvmedicine = view.findViewById(R.id.lsvMedicine);
+        //search2
+        imSearch=view.findViewById(R.id.imSearch);
+        etTitleToSearch=view.findViewById(R.id.etTitleToSearch);
+        //3 search event
+        imSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String toSearch=etTitleToSearch.getText().toString();
+            }
+        });
         lsvmedicine.setAdapter(medicineAdapter);
         return view;
 
@@ -54,10 +68,13 @@ public class AllMedicineFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        readMedicineFromFirebase();
+        //search:delete method colling
+       // readMedicineFromFirebase("");
     }
 
-    public void readMedicineFromFirebase() {
+    //4 search :add parameter toi search
+
+    public void readMedicineFromFirebase(String st) {
         FirebaseDatabase database = FirebaseDatabase.getInstance();//to connect to database
         FirebaseAuth auth = FirebaseAuth.getInstance();//to get current UID
         String uid = auth.getUid();
@@ -71,6 +88,7 @@ public class AllMedicineFragment extends Fragment {
                 for (DataSnapshot d : dataSnapshot.getChildren()) {
                     MyMedicine m = d.getValue(MyMedicine.class);
                     Log.d("MyMedicine", m.toString());
+                    if(m.getTitle().contains(stTosearch))
                     medicineAdapter.add(m);
                 }
             }
