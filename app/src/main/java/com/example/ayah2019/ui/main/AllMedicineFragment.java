@@ -37,6 +37,7 @@ public class AllMedicineFragment extends Fragment {
     private EditText etTitleToSearch;
 
 
+
     public AllMedicineFragment() {
         // Required empty public constructor
     }
@@ -74,7 +75,7 @@ public class AllMedicineFragment extends Fragment {
 
     //4 search :add parameter toi search
 
-    public void readMedicineFromFirebase(String st) {
+    public void readMedicineFromFirebase( final String stTosearch) {
         FirebaseDatabase database = FirebaseDatabase.getInstance();//to connect to database
         FirebaseAuth auth = FirebaseAuth.getInstance();//to get current UID
         String uid = auth.getUid();
@@ -88,6 +89,11 @@ public class AllMedicineFragment extends Fragment {
                 for (DataSnapshot d : dataSnapshot.getChildren()) {
                     MyMedicine m = d.getValue(MyMedicine.class);
                     Log.d("MyMedicine", m.toString());
+                    if (stTosearch==null || stTosearch.length()==0)
+                    {
+                        medicineAdapter.add(m);
+                    }
+                    else //search
                     if(m.getTitle().contains(stTosearch))
                     medicineAdapter.add(m);
                 }
